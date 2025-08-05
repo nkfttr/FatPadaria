@@ -1,0 +1,122 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Padaria Fazenda</title>
+    <link rel="stylesheet" href="css/grid.css">
+    <script defer src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+</head>
+<body>
+    <div class="sidebar-container">
+        <a href="index.html"><br><br><br><br>Inicio</a>
+        <a href="htmlfiles/infos.html">Sobre</a>
+        <a href="#"><img src="images/logo/whats.png" id="ask" alt="interrogação"></a>
+        <a href="htmlfiles/forms.html">Faça uma solicitação</a>
+        <a href="htmlfiles/calcularPedido.html">Calcular pedidos</a>
+    </div>
+
+    <header style="margin: auto">
+        <h2 onclick="window.location.href='index.html'">PADARIA FAZENDA</h2>
+    </header>
+
+
+    <div class="container">
+        <main>
+            <input type="text" id="busca" placeholder="Buscar produto..." oninput="filtrarProdutos()" style="width: 100%; padding: 10px; margin: 20px auto; display: block; font-size: 16px;">
+
+            <section class="grid">
+                <div class="prod">
+                    <img src="https://amopaocaseiro.com.br/wp-content/uploads/2020/04/receita-de-pao-frances-caseiro-IMG_4360.jpg" alt="Pão Francês">
+                    <h1 class="produto-title">Pão Francês</h1><a>Pão de casca crocante e interior macio</a>
+                    <div class="preco">R$ 0,60
+                        <div class="add"></div>
+                        <button class="compra" data-valor="0.60" onclick="popEffect();adicionarAoCarrinho(this)">Adicionar</button>
+                    </div>
+                </div>
+                <div class="prod">
+                    <img src="https://i.ytimg.com/vi/bkX0u3G-f0E/maxresdefault.jpg" alt="Pão Doce">
+                    <h1 class="produto-title">Pão Doce</h1><a>Pão macio e levemente adocicado</a>
+                    <div class="preco">R$ 2,50
+                        <div class="add"></div>
+                        <button class="compra" data-valor="2.50" onclick="popEffect(); adicionarAoCarrinho(this)">Adicionar</button>
+                    </div>
+                </div>
+                <div class="prod">
+                    <img src="https://cdn.casaeculinaria.com/wp-content/uploads/2023/05/16114400/Massa-de-coxinha.webp" alt="Coxinha">
+                    <h1 class="produto-title">Coxinha</h1><a>Salgado de massa macia recheada com frango</a>
+                    <div class="preco">R$ 5,00
+                        <div class="add"></div>
+                        <button class="compra" data-valor="5.00" onclick="popEffect(); adicionarAoCarrinho(this)">Adicionar</button>
+                    </div>
+                </div>
+                <div class="prod">
+                    <img src="https://cdn.casaeculinaria.com/wp-content/uploads/2024/06/15032654/Empada-de-frango-fit.webp" alt="Empada">
+                    <h1 class="produto-title">Empada</h1><a>Torta salgada de massa quebradiça, recheada com frango</a>
+                    <div class="preco">R$ 4,50
+                        <div class="add"></div>
+                        <button class="compra" data-valor="4.50" onclick="popEffect(); adicionarAoCarrinho(this)">Adicionar</button>
+                    </div>
+                </div>
+                <div class="prod">
+                    <img src="https://pilotandofogao.com.br/wp-content/uploads/2022/09/Bolo-de-fuba-sem-gluten-e-sem-lactose-1.jpg" alt="Bolo de fubá">
+                    <h1 class="produto-title">Bolo de fubá (fatia)</h1><a>Bolo tradicional feito com fubá</a>
+                    <div class="preco">R$ 3,50
+                        <div class="add"></div>
+                        <button class="compra" data-valor="3.50" onclick="popEffect(); adicionarAoCarrinho(this)">Adicionar</button>
+                    </div>
+                </div>
+                <div class="prod">
+                    <img src="https://www.comidaereceitas.com.br/img/sizes/600x400/Carolinas_recheadasss.jpg" alt="Carolina">
+                    <h1 class="produto-title">Carolina</h1><a>Pequena bomba de choux recheada com creme</a>
+                    <div class="preco">R$ 4,00
+                        <div class="add"></div>
+                        <button class="compra" data-valor="4.00" onclick="popEffect(); adicionarAoCarrinho(this)">Adicionar</button>
+                    </div>
+                </div>
+                <div class="prod">
+                    <img src="https://claudia.abril.com.br/wp-content/uploads/2020/02/receita-sonho-doce-1.jpg?quality=70&strip=all&resize=360" alt="Sonho">
+                    <h1 class="produto-title">Sonho</h1><a>Massa recheada com baunilha e polvilhada com açúcar</a>
+                    <div class="preco">R$ 5,00
+                        <div class="add"></div>
+                        <button class="compra" data-valor="5.00" onclick="popEffect(); adicionarAoCarrinho(this)">Adicionar</button>
+                    </div>
+                </div>
+                <div class="prod">
+                    <img src="https://www.academiaassai.com.br/sites/default/files/como-fazer-pao-de-queijo_easy-resize.com_.jpg" alt="Pão de Queijo">
+                    <h1 class="produto-title">Pão de Queijo</h1><a>Pão feito com polvilho e queijo</a>
+                    <div class="preco">R$ 3,50
+                        <div class="add"></div>
+                        <button class="compra" data-valor="3.50" onclick="popEffect(); adicionarAoCarrinho(this)">Adicionar</button>
+                    </div>
+                </div>
+                <div class="prod">
+                    <img src="https://receitinhas.com.br/wp-content/uploads/2016/12/Esfirra-de-carne-moida.jpg" alt="Esfirra de Carne">
+                    <h1 class="produto-title">Esfirra de Carne</h1><a>Massa assada recheada com carne moída bem temperada</a>
+                    <div class="preco">R$ 6,00
+                        <div class="add"></div>
+                        <button class="compra" data-valor="6.00" onclick="popEffect(); adicionarAoCarrinho(this)">Adicionar</button>
+                    </div>
+                </div>
+                <div class="prod">
+                    <img src="https://receitatodahora.com.br/wp-content/uploads/2022/11/torta-de-limao-receita-toda-hora.jpg" alt="Torta de Limão">
+                    <h1 class="produto-title">Torta de Limão</h1><a>Base crocante, recheio cremoso de limão</a>
+                    <div class="preco">R$ 7,50 (fatia)
+                        <div class="add"></div>
+                        <button class="compra" data-valor="7.50" onclick="popEffect(); adicionarAoCarrinho(this)">Adicionar</button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <aside style="padding: 20px" class="carrinho">
+            <div class="container2">
+                <p>Total: R$ <span id="total">0</span></p>
+                <button id="fimc" onclick="fimCompra()">Finalizar Compra</button>
+            </div>
+        </aside>
+    </div>
+</body>
+</html>
